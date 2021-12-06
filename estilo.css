@@ -4,6 +4,14 @@
 @import "fonts/verdana.css";
 
 :root {
+  --background-1: #ffffff;
+  --border-1: #d3d3d3;
+  --border-2: #aac0ae;
+  --color: #333333;
+  --gradient-start: #f6f1b2;
+  --gradient-end: #4599b2;
+  --header-color: #e90c0c;
+  --strong: #d027aa;
   --ticket-height: 84px;
 }
 
@@ -11,37 +19,47 @@ h1 {
   font-family: "Ravie";
 }
 
+h3 {
+  font-family: "Verdana", "OpenSans", sans-serif;
+  font-size: 18px;
+  color: var(--color);
+}
+
 body {
-  background-color: #fff;
+  background-color: var(--background-1);
   font-family: "Verdana", "OpenSans", sans-serif;
 }
 
 strong {
-  color: #d027aa;
+  color: var(--strong);
 }
 
 #recipiente {
-  background-image: linear-gradient(to bottom, #f6f1b2, #4599b2 80%);
-  border-left: 1px solid #d3d3d3;
-  border-right: 1px solid #d3d3d3;
+  background-image: linear-gradient(
+    to bottom,
+    var(--gradient-start),
+    var(--gradient-end) 80%
+  );
+  border-left: 1px solid var(--border-1);
+  border-right: 1px solid var(--border-1);
 }
 
 #cardapio {
   background-color: rgba(255, 255, 255, 0.2);
-  border-top: 1px solid #aac0ae;
-  border-bottom: 1px solid #aac0ae;
-  border-left: 1px solid #aac0ae;
+  border-top: 1px solid var(--border-2);
+  border-bottom: 1px solid var(--border-2);
+  border-left: 1px solid var(--border-2);
 }
 
 #cardapio h3 {
   font-size: 18px;
-  color: #333;
+  color: var(--color);
   margin-top: 30px;
 }
 
 #cardapio article {
   font-size: 14px;
-  color: #333;
+  color: var(--color);
 }
 
 /* EXERCÍCIO 2: layout da página */
@@ -91,7 +109,7 @@ body,
 #cabecalho-pagina h1 {
   margin: 0;
   font-size: 36px;
-  color: #e90c0c;
+  color: var(--header-color);
   font-weight: normal;
   text-align: center;
 }
@@ -99,7 +117,7 @@ body,
 #cabecalho-pagina h2 {
   margin: 0;
   font-size: 24px;
-  color: #333;
+  color: var(--color);
   font-weight: normal;
   text-align: right;
 }
@@ -150,11 +168,21 @@ article {
   left: -44px;
 }
 
-/* EXERCÍCIO 9: bolhas - no HTML e no JS */
-/* --- */
-
 /* EXERCÍCIO 10: modo escuro */
 /* no início deste arquivo (depois dos @import), coloque
    as custom properties */
 /* coloque aqui a media query para sobrescrever o valor
    das custom properties para o modo escuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-1: #363c59;
+    --border-1: #f8f8f2;
+    --border-2: #aac0ae;
+    --color: #f2f2f2;
+    --gradient-start: #038c7f;
+    --gradient-end: #01403a;
+    --header-color: #8c0303;
+    --strong: #f2f2f2;
+    --ticket-height: 84px;
+  }
+}
