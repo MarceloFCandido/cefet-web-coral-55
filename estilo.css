@@ -51,7 +51,7 @@ body,
   margin: auto;
   width: 800px;
   display: grid;
-  grid-template-rows: 10vh auto 15vh;
+  grid-template-rows: max-content auto max-content;
   grid-template-columns: 154px auto;
 }
 
@@ -77,6 +77,7 @@ body,
 
 /* EXERCÍCIO 3: cabeçalho da página */
 #cabecalho-pagina {
+  margin: 10px 10px 10px 0;
 }
 
 #cabecalho-pagina h1 {
@@ -84,6 +85,7 @@ body,
   font-size: 36px;
   color: #e90c0c;
   font-weight: normal;
+  text-align: center;
 }
 
 #cabecalho-pagina h2 {
@@ -91,6 +93,7 @@ body,
   font-size: 24px;
   color: #333;
   font-weight: normal;
+  text-align: right;
 }
 
 /* EXERCÍCIO 4: cada item do menu */
