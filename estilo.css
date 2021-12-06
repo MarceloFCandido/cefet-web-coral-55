@@ -3,6 +3,10 @@
 @import "fonts/ravie.css";
 @import "fonts/verdana.css";
 
+:root {
+  --ticket-height: 84px;
+}
+
 h1 {
   font-family: "Ravie";
 }
@@ -124,9 +128,14 @@ article {
 
 /* EXERCÍCIO 7: o ticket */
 #ticket {
+  top: calc(50% - var(--ticket-height) / 2);
+  position: fixed;
+  left: -89px;
+  transition: left 100ms ease-out; /* propriedade, duração, interpolação */
 }
 
 #ticket:hover {
+  left: 0;
 }
 
 /* EXERCÍCIO 8: deslocamento no siri e peixe */
